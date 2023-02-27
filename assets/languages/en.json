@@ -1,0 +1,22 @@
+{
+    "Sign_in":"Sign in",
+    "Password":"Password",
+    "Email":"Email",
+    "Dont_have_an_account_?":"Dont have an account ?",
+    "Sign_Up":"Sign Up",
+    "First_Name":"First Name",
+    "Last_Name":"Last Name",
+    "Phone_Number":"Phone Number",
+    "Log_Out":"Log Out",
+    "Language":"Language",
+    "DarkMode":"DarkMode",
+    "E-mail :":"E-mail :",
+    "Phone :":"Phone :",
+    "submit":"submit",
+    "Required field":"Required field",
+    "Error, the password must be larger than 6 letters":"Error, the password must be larger than 6 letters",
+    "InCorrect phone number syntax":"InCorrect phone number syntax",
+    "Enter A valid Email":"Enter A valid Email",
+    "should be a 6-digit Number":"should be a 6-digit Number",
+    "confirmPassword":"confirmPassword"
+}

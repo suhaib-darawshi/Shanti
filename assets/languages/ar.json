@@ -1,0 +1,22 @@
+{
+    "Sign_in":"سجل الدخول",
+    "Password":"الرقم السري",
+    "Email":"البريد الالكتروني",
+    "Dont_have_an_account_?":"لا تمتلك حسابا ؟",
+    "Sign_Up":"سجل الان",
+    "First_Name":"الاسم الاول",
+    "Last_Name":"اسم العائلة",
+    "Phone_Number":"رقم الهاتف",
+    "Log_Out":"سجل الخروج",
+    "Language":"اللغة",
+    "DarkMode":"الوضع الليلي",
+    "E-mail :":" :الايميل",
+    "Phone :":"رقم الهاتف :",
+    "submit":"قيم",
+    "Required field":"الحقل مطلوب",
+    "Error, the password must be larger than 6 letters":"خطأ،الرقم يجب ان يكون اطول من 6 احرف",
+    "InCorrect phone number syntax":"الادخال الذي قمت به خاطئ",
+    "Enter A valid Email":"قم بادخال ايميل صحيح",
+    "should be a 6-digit Number":"يجب ان يكون 6 ارقام",
+    "confirmPassword":"تأكيد كلمة السر"
+}
