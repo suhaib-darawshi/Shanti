@@ -7,25 +7,28 @@ class AppProvider extends ChangeNotifier {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
   TextEditingController firstnameController = TextEditingController();
   TextEditingController lastnameController = TextEditingController();
   GlobalKey<FormState> signinKey = GlobalKey();
   GlobalKey<FormState> signupKey = GlobalKey();
 
-  
   final List<Locale> languages = [const Locale('en'), const Locale('ar')];
   int local = 0;
   Locale getLocale() {
     return languages[local];
   }
+
   setLocaleFromButton() {
     local = (local + 1) % languages.length;
     notifyListeners();
   }
+
   setDarkMode() {
     isDark = !isDark;
     notifyListeners();
   }
+
   String? passwordValidation(String password) {
     if (password == null || password.isEmpty) {
       return "Required field".tr();

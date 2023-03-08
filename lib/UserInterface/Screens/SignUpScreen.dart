@@ -3,10 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:shanti/UserInterface/Widgets/CustomFormField.dart';
 import '../../App_Router/App_Router.dart';
 import '../../Provider/AppProvider.dart';
 
 class SignUpScreen extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,99 +56,59 @@ class SignUpScreen extends StatelessWidget {
                   height: 35.h,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    decoration: InputDecoration(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextField(
+                      icon: const Icon(Icons.email),
+                      validation: provider.emailValidation,
+                      label: 'Email'.tr(),
+                      controller: provider.emailController),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextField(
                       icon: Icon(
                         Icons.abc,
                         color: provider.isDark ? Colors.white : Colors.black,
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      labelText: "First_Name".tr(),
-                    ),
-                    validator: (v) => provider.requiredValidation(v ?? ''),
-                    controller: provider.firstnameController,
-                  ),
+                      validation: (v) => provider.requiredValidation(v ?? ''),
+                      label: "First_Name".tr(),
+                      controller: provider.firstnameController),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    decoration: InputDecoration(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextField(
                       icon: Icon(
                         Icons.abc,
                         color: provider.isDark ? Colors.white : Colors.black,
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      labelText: "Last_Name".tr(),
-                    ),
-                    validator: (v) => provider.requiredValidation(v ?? ''),
-                    controller: provider.lastnameController,
-                  ),
+                      validation: (v) => provider.requiredValidation(v ?? ''),
+                      label: "Last_Name".tr(),
+                      controller: provider.lastnameController),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      icon: Icon(
-                        Icons.email,
-                        color: provider.isDark ? Colors.white : Colors.black,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      labelText: "Email".tr(),
-                    ),
-                    validator: (v) => provider.emailValidation(v ?? ''),
-                    controller: provider.emailController,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextField(
                       icon: Icon(
                         Icons.lock_open,
                         color: provider.isDark ? Colors.white : Colors.black,
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      labelText: "Password".tr(),
-                    ),
-                    validator: (v) => provider.passwordValidation(v ?? ''),
-                    controller: provider.passwordController,
-                  ),
+                      validation: (v) => provider.passwordValidation(v ?? ''),
+                      label: "Password".tr(),
+                      controller: provider.passwordController),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomTextField(
                       icon: Icon(
                         Icons.lock_open,
                         color: provider.isDark ? Colors.white : Colors.black,
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      labelText: "confirmPassword".tr(),
-                    ),
-                    validator: (v) => provider.passwordValidation(v ?? ''),
-                    controller: provider.passwordController,
-                  ),
+                      validation: (v) => provider.passwordValidation(v ?? ''),
+                      label: "confirmPassword".tr(),
+                      controller: provider.confirmPasswordController),
                 ),
-                
                 ElevatedButton(
-                    onPressed: () async {
-                      
-                      
-                    },
+                    onPressed: () async {},
                     style: TextButton.styleFrom(
                         backgroundColor:
                             provider.isDark ? Colors.black : Colors.white,
@@ -158,7 +120,10 @@ class SignUpScreen extends StatelessWidget {
                           fontSize: 23,
                           backgroundColor:
                               provider.isDark ? Colors.black : Colors.white),
-                    ))
+                    )),
+                SizedBox(
+                  height: 100.h,
+                )
               ],
             ),
           ),

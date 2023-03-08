@@ -18,5 +18,7 @@
     "InCorrect phone number syntax":"InCorrect phone number syntax",
     "Enter A valid Email":"Enter A valid Email",
     "should be a 6-digit Number":"should be a 6-digit Number",
-    "confirmPassword":"confirmPassword"
+    "confirmPassword":"confirm Password",
+    "MyProjects":"My Projects",
+    "AddProject":"Add Project"
 }

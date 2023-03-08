@@ -2,14 +2,16 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:shanti/UserInterface/Screens/LoginScreen.dart';
 
 import 'App_Router/App_Router.dart';
 import 'Provider/AppProvider.dart';
+import 'UserInterface/Screens/HomeScreen.dart';
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  
+
   runApp(Material());
 }
 
@@ -27,7 +29,6 @@ class Material extends StatelessWidget {
               return AppProvider();
             },
           ),
-          
         ],
         child: Builded(),
       ),
@@ -50,8 +51,8 @@ class Builded extends StatelessWidget {
               ? ThemeData.dark()
               : ThemeData.light(),
           navigatorKey: AppRouter.router.navigatorKey,
-          title: 'Easy Trip',
-          
+          title: 'Next Step',
+          home: MainScreen(),
         );
       },
     );

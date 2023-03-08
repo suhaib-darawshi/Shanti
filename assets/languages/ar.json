@@ -18,5 +18,7 @@
     "InCorrect phone number syntax":"الادخال الذي قمت به خاطئ",
     "Enter A valid Email":"قم بادخال ايميل صحيح",
     "should be a 6-digit Number":"يجب ان يكون 6 ارقام",
-    "confirmPassword":"تأكيد كلمة السر"
+    "confirmPassword":"تأكيد كلمة السر",
+    "MyProjects":"مشاريعي",
+    "AddProject":"اضافة مشروع"
 }
